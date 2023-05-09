@@ -13,7 +13,7 @@
 <body>
     <section class="booking">
         <h1 class="booking__header">Бронирование переговорной</h1>
-        <form class="booking__form form" action="">
+        <form class="booking__form form" action="" onsubmit="submitForm()">
             <div class="form__line">
                 <div class="input__wrap">
                     <label for="tower" class="input__label">Башня:</label>
@@ -26,24 +26,20 @@
             <div class="form__line place">
                 <div class="input__wrap">
                     <label for="floor" class="input__label">Этаж:</label>
-                    <select name="" id="floor">
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+                    <select class="floor__select" name="" id="floor">
+                      
                     </select>
                 </div>
                 <div class="input__wrap">
                     <label for="room" class="input__label">Переговорная:</label>
-                    <select name="" id="room">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                    <select class="room__select" name="" id="room">
                     </select>
                 </div>
             </div>
             <div class="form__line time">
                 <div class="input__wrap">
                     <label for="date">Дата:</label>
-                    <input type="date" id="date" name="" value="2018-07-22" min="2018-01-01"
-                        max="2018-12-31">
+                    <input class="data__input" type="date" id="date" name="" value="">
                 </div>
                 <div class="input__wrap">
                     <label for="time" class="input__label">Время:</label>
