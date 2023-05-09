@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <title>Form</title>
+
+</head>
+
+<body>
+    <section class="booking">
+        <h1 class="booking__header">Бронирование переговорной</h1>
+        <form class="booking__form form" action="">
+            <div class="form__line">
+                <div class="input__wrap">
+                    <label for="tower" class="input__label">Башня:</label>
+                    <select name="" id="tower">
+                        <option value="A">А</option>
+                        <option value="B">Б</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form__line place">
+                <div class="input__wrap">
+                    <label for="floor" class="input__label">Этаж:</label>
+                    <select name="" id="floor">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="input__wrap">
+                    <label for="room" class="input__label">Переговорная:</label>
+                    <select name="" id="room">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form__line time">
+                <div class="input__wrap">
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" name="" value="2018-07-22" min="2018-01-01"
+                        max="2018-12-31">
+                </div>
+                <div class="input__wrap">
+                    <label for="time" class="input__label">Время:</label>
+                    <select name="" id="time">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form__line comment">
+                <label for="comment">Комментарий</label>
+                <textarea class="comment__txt" name="" id="comment" cols="30" rows="5"></textarea>
+            </div>
+            <div class="buttons">
+                <button class="btn submit">Отправить</button>
+                <button class="btn btn-del delete">Очистить</button>
+            </div>
+        </form>
+    </section>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

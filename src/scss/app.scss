@@ -1,0 +1,92 @@
+@import './var.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+a,
+label,
+span {
+    font-family: sans-serif;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    padding: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking {
+    &__header {
+        padding-bottom: 30px;
+    }
+}
+
+.form {
+    &__line {
+        margin-bottom: 20px;
+    }
+}
+
+.input {
+    &__wrap {
+        display: flex;
+    }
+}
+
+.place {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+
+    &__txt {
+        border: none;
+        border-bottom: 2px solid $main;
+        resize: none;
+    }
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between
+}
+
+.btn {
+    @include button;
+    margin: 10px 0;
+
+    &-del {
+        background: transparent;
+        border: 2px solid $main;
+        color: $main;
+
+        &:hover {
+            color: white;
+            background: $main;
+        }
+    }
+}
