@@ -14,10 +14,10 @@
     <section class="booking">
         <h1 class="booking__header">Бронирование переговорной</h1>
         <form class="booking__form form" action="" >
-            <div class="form__line">
-                <div class="input__wrap">
+            <div class="tower">
+                <div class="">
                     <label for="tower" class="input__label">Башня:</label>
-                    <select name="tower" id="tower" required>
+                    <select class="input__select tower__select" name="tower" id="tower" required>
                         <option selected disabled hidden></option>
                         <option value="A">А</option>
                         <option value="B">Б</option>
@@ -27,32 +27,32 @@
             <div class="form__line place">
                 <div class="input__wrap">
                     <label for="floor" class="input__label">Этаж:</label>
-                    <select class="floor__select" name="floor" id="floor" required>
+                    <select class="input__select floor__select" name="floor" id="floor" required>
                         <option selected disabled hidden></option>
                     </select>
                 </div>
                 <div class="input__wrap">
                     <label for="room" class="input__label">Переговорная:</label>
-                    <select class="room__select" name="room" id="room" required>
+                    <select class="input__select room__select" name="room" id="room" required>
                         <option selected disabled hidden></option>
                     </select>
                 </div>
             </div>
             <div class="form__line time">
                 <div class="input__wrap">
-                    <label for="date">Дата:</label>
-                    <input class="data__input" type="date" id="date" name="data" required>
+                    <label class="input__label" for="date">Дата</label>
+                    <input class="input__input data__input" type="date" id="date" name="data" required>
                 </div>
                 <div class="input__wrap">
                     <label  for="time" class="input__label">Время:</label>
-                    <select class="time__input" name="time" id="time" required>
+                    <select class="input__select time__input" name="time" id="time" required>
                         <option selected disabled hidden></option>
                     </select>
                 </div>
             </div>
-            <div class="form__line comment">
-                <label for="comment">Комментарий</label>
-                <textarea class="comment__txt" name="comment" id="comment" cols="30" rows="5"></textarea>
+            <div class="comment">
+                <label class="input__label" for="comment">Комментарий</label>
+                <textarea class="input__textarea comment__txt" name="comment" id="comment" cols="30" rows="4"></textarea>
             </div>
             <div class="buttons">
                 <button class="btn submit" type="submit" disabled>Отправить</button>
