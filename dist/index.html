@@ -13,11 +13,12 @@
 <body>
     <section class="booking">
         <h1 class="booking__header">Бронирование переговорной</h1>
-        <form class="booking__form form" action="" onsubmit="submitForm()">
+        <form class="booking__form form" action="" >
             <div class="form__line">
                 <div class="input__wrap">
                     <label for="tower" class="input__label">Башня:</label>
-                    <select name="" id="tower">
+                    <select name="tower" id="tower" required>
+                        <option selected disabled hidden></option>
                         <option value="A">А</option>
                         <option value="B">Б</option>
                     </select>
@@ -26,34 +27,36 @@
             <div class="form__line place">
                 <div class="input__wrap">
                     <label for="floor" class="input__label">Этаж:</label>
-                    <select class="floor__select" name="" id="floor">
-                      
+                    <select class="floor__select" name="floor" id="floor" required>
+                        <option selected disabled hidden></option>
                     </select>
                 </div>
                 <div class="input__wrap">
                     <label for="room" class="input__label">Переговорная:</label>
-                    <select class="room__select" name="" id="room">
+                    <select class="room__select" name="room" id="room" required>
+                        <option selected disabled hidden></option>
                     </select>
                 </div>
             </div>
             <div class="form__line time">
                 <div class="input__wrap">
                     <label for="date">Дата:</label>
-                    <input class="data__input" type="date" id="date" name="" value="">
+                    <input class="data__input" type="date" id="date" name="data" required>
                 </div>
                 <div class="input__wrap">
                     <label  for="time" class="input__label">Время:</label>
-                    <select class="time__input" name="" id="time">
+                    <select class="time__input" name="time" id="time" required>
+                        <option selected disabled hidden></option>
                     </select>
                 </div>
             </div>
             <div class="form__line comment">
                 <label for="comment">Комментарий</label>
-                <textarea class="comment__txt" name="" id="comment" cols="30" rows="5"></textarea>
+                <textarea class="comment__txt" name="comment" id="comment" cols="30" rows="5"></textarea>
             </div>
             <div class="buttons">
-                <button class="btn submit">Отправить</button>
-                <button class="btn btn-del delete">Очистить</button>
+                <button class="btn submit" type="submit" disabled>Отправить</button>
+                <button class="btn btn-res reset"  type="button">Очистить</button>
             </div>
         </form>
     </section>
