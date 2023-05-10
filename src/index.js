@@ -46,9 +46,12 @@ while (time <= lastInterval) {
 
 
 //SUBMIT
-const btn = document.querySelector('.submit')
 const form = document.querySelector('.booking__form')
+const resetBtn = document.querySelector('.reset')
+
 form.addEventListener('submit', handleFormSubmit)
+resetBtn.addEventListener('click', resetForm)
+form.addEventListener('input', checkValidity)
 
 function getFormData(formNode) {
     let dataObj = {}
@@ -60,13 +63,20 @@ function getFormData(formNode) {
     console.log(data)
 }
 
-
 function handleFormSubmit(event) {
     event.preventDefault()
     getFormData(form)
 }
 
-btn.addEventListener('submit', submitForm)
-function submitForm() {
-    console.log(roomSelect.value)
+function checkValidity(event) {
+    const formNode = event.target.form
+    const isValid = formNode.checkValidity()
+
+    formNode.querySelector('.submit').disabled = !isValid
+}
+
+
+function resetForm() {
+    form.reset()
+    dataInput.value = dayInfo
 }
