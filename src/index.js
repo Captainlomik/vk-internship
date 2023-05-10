@@ -35,7 +35,17 @@ const dataInput = document.querySelector('.data__input')
 dataInput.min = dayInfo
 dataInput.value = dayInfo
 
-//Submit
+//TIME
+const timeInput = document.querySelector('.time__input')
+let time = 9;
+let lastInterval = 21;
+while(time <= lastInterval){
+    timeInput.innerHTML+= `<option>${time}:00 - ${time+1}:00</option>`
+    time++;
+}
+
+
+//SUBMIT
 const btn = document.querySelector('.submit')
 
 btn.addEventListener('submit', submitForm)
