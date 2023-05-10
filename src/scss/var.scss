@@ -1,14 +1,18 @@
 $main: #0077FF;
 $accent: rgb(128, 36, 192);
+$default: rgb(33,33,33);
+$smallTxt: #1a3b5d;
 
 @mixin button {
     background: #0077FF;
     color: white;
     text-transform: lowercase;
     font-weight: 500;
-    padding: 8px 32px;
+    font-size: 16px;
+    padding: 12px 36px;
     cursor: pointer;
     border:2px solid transparent;
+    border-radius: 5px;
 
     &:hover {
         background: $accent;
