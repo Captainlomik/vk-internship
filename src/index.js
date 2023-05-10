@@ -39,16 +39,34 @@ dataInput.value = dayInfo
 const timeInput = document.querySelector('.time__input')
 let time = 9;
 let lastInterval = 21;
-while(time <= lastInterval){
-    timeInput.innerHTML+= `<option>${time}:00 - ${time+1}:00</option>`
+while (time <= lastInterval) {
+    timeInput.innerHTML += `<option>${time}:00 - ${time + 1}:00</option>`
     time++;
 }
 
 
 //SUBMIT
 const btn = document.querySelector('.submit')
+const form = document.querySelector('.booking__form')
+form.addEventListener('submit', handleFormSubmit)
+
+function getFormData(formNode) {
+    let dataObj = {}
+    Array.from(formNode).filter(item => !!item.name)
+        .forEach(el => {
+            dataObj[el.name] = el.value
+        })
+    let data = JSON.stringify(dataObj)
+    console.log(data)
+}
+
+
+function handleFormSubmit(event) {
+    event.preventDefault()
+    getFormData(form)
+}
 
 btn.addEventListener('submit', submitForm)
 function submitForm() {
-console.log(roomSelect.value)
+    console.log(roomSelect.value)
 }
